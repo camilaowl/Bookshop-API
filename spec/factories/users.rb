@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
-    name { "MyString" }
-    email { "MyString" }
-    role { "MyString" }
+    name { FFaker::Name.name }
+    email { FFaker::Internet.email }
+    role { 'customer' }
   end
 end

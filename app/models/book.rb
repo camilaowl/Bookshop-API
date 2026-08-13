@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  before_validation :generate_slug, on: :create
+  before_create :generate_slug
 
   belongs_to :category
   has_many :book_authors, dependent: :destroy

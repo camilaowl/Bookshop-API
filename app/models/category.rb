@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  before_validation :generate_slug, on: :create
+  before_create :generate_slug
 
   has_many :books
 

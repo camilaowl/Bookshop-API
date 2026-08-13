@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :book do
-    category { nil }
-    title { "MyString" }
-    description { "MyText" }
-    slug { "MyString" }
+    association :category, factory: :category
+    title { FFaker::Book.title }
+    description { FFaker::Lorem.paragraph }
+    price { 9.99 }
+    stock { 1 }
   end
 end
